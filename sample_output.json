@@ -1,0 +1,84 @@
+{
+  "accounts": [
+    {
+      "account_name": "corp-main",
+      "host": "gitlab.example.com",
+      "projects": [
+        {
+          "commits": [
+            {
+              "commit_id": "123-1",
+              "day_of_week": "Monday",
+              "hour": 20,
+              "timestamp": "2026-05-25T20:08:22.999582Z"
+            },
+            {
+              "commit_id": "123-2",
+              "day_of_week": "Sunday",
+              "hour": 20,
+              "timestamp": "2026-05-24T20:08:22.999582Z"
+            },
+            {
+              "commit_id": "123-3",
+              "day_of_week": "Saturday",
+              "hour": 20,
+              "timestamp": "2026-05-23T20:08:22.999582Z"
+            },
+            {
+              "commit_id": "123-4",
+              "day_of_week": "Friday",
+              "hour": 20,
+              "timestamp": "2026-05-22T20:08:22.999582Z"
+            },
+            {
+              "commit_id": "123-5",
+              "day_of_week": "Thursday",
+              "hour": 20,
+              "timestamp": "2026-05-21T20:08:22.999582Z"
+            }
+          ],
+          "project_id": "123"
+        },
+        {
+          "commits": [
+            {
+              "commit_id": "456-1",
+              "day_of_week": "Monday",
+              "hour": 20,
+              "timestamp": "2026-05-25T20:08:22.999719Z"
+            },
+            {
+              "commit_id": "456-2",
+              "day_of_week": "Sunday",
+              "hour": 20,
+              "timestamp": "2026-05-24T20:08:22.999719Z"
+            },
+            {
+              "commit_id": "456-3",
+              "day_of_week": "Saturday",
+              "hour": 20,
+              "timestamp": "2026-05-23T20:08:22.999719Z"
+            },
+            {
+              "commit_id": "456-4",
+              "day_of_week": "Friday",
+              "hour": 20,
+              "timestamp": "2026-05-22T20:08:22.999719Z"
+            },
+            {
+              "commit_id": "456-5",
+              "day_of_week": "Thursday",
+              "hour": 20,
+              "timestamp": "2026-05-21T20:08:22.999719Z"
+            }
+          ],
+          "project_id": "456"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-05-25T20:08:23.000728Z",
+  "payload_hash": "9ca44dfc9b77603d5c1b93fa9afd35f6c7a3867db032214c0a9e65ea0d7b2a6c",
+  "schema_version": "1.0",
+  "source": "local-collector"
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://committracer.local/schemas/export.schema.json",
+  "schema_version": "1.0",
+  "required": ["schema_version", "generated_at", "source", "accounts"],
+  "description": "Local collector export contract for uploaded GitLab metadata."
+}

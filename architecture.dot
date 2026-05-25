@@ -1,0 +1,98 @@
+digraph GitIntelligence {
+    rankdir=TB
+    fontname="Arial"
+    fontsize=13
+    splines=ortho
+    nodesep=0.7
+    ranksep=0.9
+    bgcolor="transparent"
+
+    node [
+        fontname="Arial"
+        fontsize=12
+        shape=roundedbox
+        style=filled
+        fillcolor="#F5F5F5"
+        color="#AAAAAA"
+        penwidth=1.2
+        margin="0.2,0.12"
+    ]
+
+    edge [
+        fontname="Arial"
+        fontsize=10
+        color="#888888"
+        penwidth=1.2
+        arrowsize=0.8
+    ]
+
+    subgraph cluster_collector {
+        label="Component 1 — Local Collector Script (runs on the user machine)"
+        fontname="Arial"
+        fontsize=12
+        fontcolor="#444444"
+        style=dashed
+        color="#BBBBBB"
+        bgcolor="#FAFAFA"
+        margin=20
+
+        download    [label="Download collector script\nfrom website", fillcolor="#E8F0FE", color="#4A7FD4"]
+        collect     [label="Collect GitLab commit metadata\nfor multiple accounts", fillcolor="#E8F0FE", color="#4A7FD4"]
+        normalize   [label="Normalize to approved fields\n(commit_id + timestamp + day/hour)", fillcolor="#E8F0FE", color="#4A7FD4"]
+        fingerprint [label="Create payload hash\n(tamper evidence)", fillcolor="#E8F0FE", color="#4A7FD4"]
+        json_out    [label="output.json", shape=note, fillcolor="#FFF9E6", color="#C8A000"]
+
+        download -> collect -> normalize -> fingerprint -> json_out
+    }
+
+    subgraph cluster_platform {
+        label="Component 2 — Upload, Validation, and Reporting"
+        fontname="Arial"
+        fontsize=12
+        fontcolor="#444444"
+        style=dashed
+        color="#BBBBBB"
+        bgcolor="#FAFAFA"
+        margin=20
+
+        subgraph cluster_ingest {
+            label="Ingestion Layer"
+            fontsize=11
+            fontcolor="#666666"
+            style=dotted
+            color="#CCCCCC"
+            margin=14
+
+            upload   [label="User Uploads JSON", fillcolor="#E6F4EA", color="#3A8A52"]
+            validate [label="Schema Validation\n+ Fingerprint Check", fillcolor="#E6F4EA", color="#3A8A52"]
+            report   [label="Generate Summary Report", fillcolor="#E6F4EA", color="#3A8A52"]
+            heatmap  [label="Heatmap / Report Preview", fillcolor="#E6F4EA", color="#3A8A52"]
+
+            upload -> validate -> report -> heatmap
+        }
+    }
+
+    gitlab_corp   [label="Corporate GitLab\n(behind VPN)", shape=cylinder, fillcolor="#F0F0F0", color="#999999"]
+    account_config [label="Local Account Config\n(tokens stay on device)", shape=parallelogram, fillcolor="#FFFBE6", color="#B8A000"]
+
+    gitlab_corp    -> download [label="  user downloads then runs"]
+    account_config  -> collect  [label="  local config"]
+    json_out        -> upload   [label="  user uploads"]
+
+    subgraph cluster_legend {
+        label="Legend"
+        fontsize=11
+        fontcolor="#666666"
+        style=dotted
+        color="#DDDDDD"
+        margin=14
+        rank=sink
+
+        l1 [label="Collector step", fillcolor="#E8F0FE", color="#4A7FD4", width=1.4]
+        l2 [label="Upload / validation step", fillcolor="#E6F4EA", color="#3A8A52", width=1.4]
+        l3 [label="Report output", fillcolor="#E6F4EA", color="#3A8A52", width=1.4]
+        l4 [label="Data store / file", fillcolor="#FFF9E6", color="#C8A000", width=1.4]
+
+        l1 -> l2 -> l3 -> l4 [style=invis]
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "accounts": [
+    {
+      "account_name": "corp-main",
+      "host": "gitlab.example.com",
+      "token": "replace-me",
+      "projects": [
+        { "project_id": "123", "limit": 5 },
+        { "project_id": "456", "limit": 5 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local environment files
+.env
+.env.*
+
+# Node / frontend build output
+node_modules/
+.next/
+dist/
+build/
+
+# Generated collector output
+output.json
+
+# Logs
+*.log
+
+# Skills
+skills/
+# stories/
+tools/append_approval.ps1
+
+AGENTS.md
+context.md
