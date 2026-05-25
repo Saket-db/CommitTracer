@@ -17,6 +17,7 @@ The extractor will be used on sensitive data. It needs strong tests, predictable
 - No Component 2 work.
 - No AI inference work.
 - No public deployment story.
+- No year-end wrap report yet; that will be a later derived summary layer.
 
 ## Design Constraints
 - Keep tests fast and isolated.

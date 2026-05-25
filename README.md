@@ -12,6 +12,10 @@ Example file:
 - `sample_output.json` shows the expected shape of an export document.
 - `output.json` is the generated local artifact and is ignored by git.
 
+Future addition:
+- A year-end wrap can be layered on top later as a derived report that summarizes the uploaded JSON into totals, trends, and highlights.
+- That wrap is intentionally out of scope for the current collector/export workflow.
+
 ## Quick Start
 
 ```powershell

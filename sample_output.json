@@ -1,84 +1,59 @@
 {
   "accounts": [
     {
-      "account_name": "corp-main",
-      "host": "gitlab.example.com",
+      "account_name": "Saket-db",
+      "host": "github.com",
       "projects": [
         {
+          "project_id": "AI-Career-Agent",
           "commits": [
             {
-              "commit_id": "123-1",
-              "day_of_week": "Monday",
-              "hour": 20,
-              "timestamp": "2026-05-25T20:08:22.999582Z"
-            },
-            {
-              "commit_id": "123-2",
+              "commit_id": "ai-career-agent-001",
               "day_of_week": "Sunday",
               "hour": 20,
-              "timestamp": "2026-05-24T20:08:22.999582Z"
+              "timestamp": "2026-05-25T20:08:23.000000Z"
             },
             {
-              "commit_id": "123-3",
+              "commit_id": "ai-career-agent-002",
               "day_of_week": "Saturday",
-              "hour": 20,
-              "timestamp": "2026-05-23T20:08:22.999582Z"
-            },
-            {
-              "commit_id": "123-4",
-              "day_of_week": "Friday",
-              "hour": 20,
-              "timestamp": "2026-05-22T20:08:22.999582Z"
-            },
-            {
-              "commit_id": "123-5",
-              "day_of_week": "Thursday",
-              "hour": 20,
-              "timestamp": "2026-05-21T20:08:22.999582Z"
+              "hour": 18,
+              "timestamp": "2026-05-24T18:20:00.000000Z"
             }
-          ],
-          "project_id": "123"
+          ]
         },
         {
+          "project_id": "Chatify_frontend",
           "commits": [
             {
-              "commit_id": "456-1",
-              "day_of_week": "Monday",
-              "hour": 20,
-              "timestamp": "2026-05-25T20:08:22.999719Z"
-            },
-            {
-              "commit_id": "456-2",
-              "day_of_week": "Sunday",
-              "hour": 20,
-              "timestamp": "2026-05-24T20:08:22.999719Z"
-            },
-            {
-              "commit_id": "456-3",
-              "day_of_week": "Saturday",
-              "hour": 20,
-              "timestamp": "2026-05-23T20:08:22.999719Z"
-            },
-            {
-              "commit_id": "456-4",
+              "commit_id": "chatify-frontend-001",
               "day_of_week": "Friday",
-              "hour": 20,
-              "timestamp": "2026-05-22T20:08:22.999719Z"
+              "hour": 19,
+              "timestamp": "2026-05-23T19:10:00.000000Z"
             },
             {
-              "commit_id": "456-5",
+              "commit_id": "chatify-frontend-002",
               "day_of_week": "Thursday",
-              "hour": 20,
-              "timestamp": "2026-05-21T20:08:22.999719Z"
+              "hour": 21,
+              "timestamp": "2026-05-22T21:45:00.000000Z"
             }
-          ],
-          "project_id": "456"
+          ]
+        },
+        {
+          "project_id": "Chatify_backend",
+          "commits": [
+            {
+              "commit_id": "chatify-backend-001",
+              "day_of_week": "Wednesday",
+              "hour": 20,
+              "timestamp": "2026-05-21T20:30:00.000000Z"
+            }
+          ]
         }
       ]
     }
   ],
-  "generated_at": "2026-05-25T20:08:23.000728Z",
-  "payload_hash": "9ca44dfc9b77603d5c1b93fa9afd35f6c7a3867db032214c0a9e65ea0d7b2a6c",
+  "generated_at": "2026-05-26T15:30:00Z",
+  "payload_hash": "32604dea799b717f105d92ba70c8794e219685dffd69b1a021f22522acd51871",
   "schema_version": "1.0",
-  "source": "local-collector"
+  "source": "github.com"
 }
