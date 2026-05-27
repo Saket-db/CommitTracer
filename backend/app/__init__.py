@@ -8,6 +8,21 @@ def create_app() -> Flask:
     """Create the Flask app used by the local upload/report website."""
     app = Flask(__name__)
 
+    @app.get("/")
+    def index():
+        return jsonify(
+            {
+                "status": "ok",
+                "message": "CommitTracer backend is running.",
+                "routes": {
+                    "health": "/health",
+                    "download_collector": "/downloads/collector.py",
+                    "validate_upload": "/uploads/validate",
+                    "create_report": "/uploads/report",
+                },
+            }
+        ), 200
+
     @app.get("/health")
     def health():
         return jsonify({"status": "ok"}), 200
